@@ -1,0 +1,22 @@
+fgets(tmp_str,TMP_STR_SIZE,f);
+		if((tmp_str[0]!="P")&&(tmp_str[1]!="2")){
+			printf("Lecture impossible, fichier non identifiable");
+		}else{
+			fgets(tmp_str,TMP_STR_SIZE,f);//voir si tab[0]==commentaire
+			fgets(tmp_str,TMP_STR_SIZE,f);
+			img -> w = tmp_str[0];
+			img -> h = tmp_str[1];
+			fgets(tmp_str,TMP_STR_SIZE,f);
+			nb_ng = tmp_str[0];
+			if(nb_ng>=256){
+				printf("Erreur. Trop de nuances");
+			}else{
+				img -> path = nom_fichier;
+				img -> buff = malloc(sizeof((img -> w)*(img -> h));
+				int i;
+				for(i=0; i<(img->h); i++){
+					fgets(tmp_str,TMP_STR_SIZE,f);
+					memcpy(buff[i],tmp_str,(img->w));
+				}
+			}
+		}
